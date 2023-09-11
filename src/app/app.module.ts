@@ -21,7 +21,7 @@ import { DatePipe } from '@angular/common';
     FormsModule,
     SharedModule,
     HttpClientModule,
-        BrowserAnimationsModule
+    BrowserAnimationsModule
     
   ],
   providers: [],

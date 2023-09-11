@@ -11,10 +11,10 @@ const routes: Routes = [
     component: BaseComponent,
     children: [
       {
-        path: 'recaudos',
-        loadChildren: () => import('./modules/recaudos/recaudos.module').then(m => m.RecaudosModule),
-      },
-        { path: '', redirectTo: 'recaudos', pathMatch: 'full' },
+        path: 'students',
+        loadChildren: () => import('./modules/students/students.module').then(m => m.StudentsModule),
+      },    
+      { path: '', redirectTo: 'students', pathMatch: 'full' },
     ],
   },
 ];

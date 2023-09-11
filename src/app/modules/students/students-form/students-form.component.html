@@ -1,0 +1,33 @@
+<app-loader [loading]="loading"></app-loader>
+<mat-card *ngIf="formGroup">
+    <form [formGroup]="formGroup" class="form-card">
+        <mat-card-header class="form-header-card">
+            <mat-card-title>Estudiante</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div fxLayout="column wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid" fxLayoutAlign="center">
+
+            <mat-form-field [hidden]="true">
+                <input matInput formControlName="id">
+            </mat-form-field>   
+             
+            <div fxLayout="row wrap" fxLayoutGap="32px grid" fxLayoutAlign="center">
+
+                <mat-form-field fxFlex="95" fxFlex.gt-md="45" class="form-field" appearance="outline">
+                    <mat-label> Nombre
+                    </mat-label>
+                    <input matInput formControlName="name">                   
+                </mat-form-field>  
+                
+                
+            </div>
+            
+        </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="submitServer()">Guardar</button>
+            <button mat-raised-button (click)="goBack()" type="button">Cancelar</button>
+        </mat-card-actions>
+    </form>
+</mat-card>
+<app-subjects></app-subjects>
