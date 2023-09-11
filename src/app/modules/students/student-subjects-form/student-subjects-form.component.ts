@@ -34,7 +34,6 @@ export class StudentSubjectsFormComponent implements OnInit {
   constructor(private http: HttpClient, private formBuilder: RxFormBuilder, private router: Router,
     public route: ActivatedRoute, public snackBar: MatSnackBar, public dialog: MatDialogRef<StudentSubjectsFormComponent>,
     private zone: NgZone,  @Inject(MAT_DIALOG_DATA) public data: any) {
-      debugger;
       this.partnerId = Number(data.partnerId)
       if (data.id) {
         this.id = Number(data.id)
@@ -109,7 +108,6 @@ export class StudentSubjectsFormComponent implements OnInit {
     this.dialog.close(false);
   }
   async onSelect() {
-    debugger;
     var subjectId = this.formGroup.value.subjectId;
     if (subjectId) {
       this.partnersSubjects = await this.partnerService.getStudentsBySubject(subjectId);

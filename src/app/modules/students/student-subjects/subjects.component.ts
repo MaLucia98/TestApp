@@ -56,7 +56,6 @@ export class SubjectsComponent implements OnInit, OnDestroy, OnInit {
     this.loading = true;
     const dataSuscribe = this.partnerSubjectService.getSubjectsByPartner(this.id);
     const JoinSubscribe = dataSuscribe.subscribe(results => {
-      debugger;
       this.dataSource.data = results;
       this.loading = false;
     });
