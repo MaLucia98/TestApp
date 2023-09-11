@@ -80,7 +80,7 @@ export class StudentSubjectsFormComponent implements OnInit {
         },
         err => {
           this.zone.run(() => {
-            this.snackBar.open(err, '', { panelClass: ['error'] , duration: 3000 , horizontalPosition: 'right', verticalPosition : 'top' });
+            this.snackBar.open(err.error, '', { panelClass: ['error'] , duration: 3000 , horizontalPosition: 'right', verticalPosition : 'top' });
           });
           this.loading = false;
         }
@@ -97,7 +97,7 @@ export class StudentSubjectsFormComponent implements OnInit {
       },
         err => {
           this.zone.run(() => {
-            this.snackBar.open(err, '', { panelClass: ['error'] , duration: 3000 , horizontalPosition: 'right', verticalPosition : 'top' });
+            this.snackBar.open(err.error, '', { panelClass: ['error'] , duration: 3000 , horizontalPosition: 'right', verticalPosition : 'top' });
           });
           this.loading = false;
         }
